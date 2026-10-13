@@ -4,5 +4,6 @@
   "assets": {
     "directory": "./public",
     "html_handling": "none"
-  }
+  },
+  "workers_dev": true
 }

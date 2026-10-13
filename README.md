@@ -2,6 +2,8 @@
 
 Four static pages built with HTML and Simple.css.
 
+Live site: https://trace-beta-site.6639835.workers.dev
+
 - `public/index.html`: Beta overview
 - `public/review.html`: App review information
 - `public/testing.html`: What to test
