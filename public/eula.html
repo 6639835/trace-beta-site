@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trace is a native network-capture and API debugging tool for iOS and macOS. Beta details, testing guidance, and license agreement.">
+<title>End user license agreement — Trace</title>
+<link rel="stylesheet" href="assets/simple.min.css">
+<style>
+:root { --accent: #2563eb; --accent-hover: #1d4ed8; }
+body { grid-template-columns: 1fr min(100% - 2rem, 46rem) 1fr; }
+body > header { background: var(--bg); border-bottom: 1px solid var(--border); padding: 1.5rem 1rem 1rem; }
+header h1 { margin: 0 0 1rem; letter-spacing: -.04em; font-size: 2rem; }
+header p { margin: .4rem auto 1.2rem; max-width: 36rem; }
+.eyebrow, .muted { color: var(--text-light); font-size: .9rem; }
+header nav { padding-top: 1rem; }
+header nav a { border: none; padding: .25rem .5rem; font-size: .9rem; }
+section { border: none; padding: 1rem 0; margin: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
+h2 { font-size: 1.65rem; } h3 { font-size: 1.05rem; margin-top: 1.8rem; }
+section { scroll-margin-top: 1rem; } li + li { margin-top: .6rem; }
+.template-note { float: none; width: auto; margin: 1rem 0; font-size: .85rem; }
+.template-note p { margin-bottom: 0; }
+footer a + a { margin-left: 1rem; }
+@media (prefers-color-scheme: dark) { :root { --accent: #93b4ff; --accent-hover: #bdd0ff; } }
+header nav a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration: underline; }
+</style>
+</head><body>
+<header><h1>Trace</h1>
+<a class="button" href="https://testflight.apple.com/join/TRACE000" target="_blank" rel="noopener noreferrer">Join the TestFlight beta ↗</a>
+<nav aria-label="Pages"><a href="index.html">Beta overview</a><a href="review.html">App review information</a><a href="testing.html">What to test</a><a href="eula.html" aria-current="page">End user license agreement</a></nav></header>
+<main><section id="eula" aria-labelledby="eula-title"><h2 id="eula-title">End user license agreement</h2><p><strong>Trace - End User License Agreement</strong></p>
+<p>Last updated: 2026-10-13</p>
+<p>This End User License Agreement (&quot;Agreement&quot;) is a legal agreement between you (&quot;you&quot; or &quot;User&quot;) and Bin, Ouyang (&quot;we&quot;, &quot;us&quot;, or &quot;Licensor&quot;) for the Trace software application, including the iOS app, the macOS app, the associated Packet Tunnel and transparent proxy extensions, and any related documentation and updates (collectively, the &quot;App&quot;).</p>
+<p>By downloading, installing, or using the App, you agree to be bound by this Agreement. If you do not agree, do not download, install, or use the App.</p>
+<h3>1. LICENSE GRANT</h3>
+<p>We grant you a personal, limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on Apple-branded devices that you own or control, in accordance with the Apple Media Services Terms and the Usage Rules in the App Store Terms of Service, and solely for your personal or internal business purposes.</p>
+<h3>2. INTENDED USE</h3>
+<p>The App is a developer and diagnostic tool for capturing, inspecting, and debugging network traffic and for composing and testing API requests. It is intended to be used only on networks, devices, systems, and traffic that you own or for which you have explicit authorization to inspect.</p>
+<h3>3. ACCEPTABLE USE</h3>
+<p>You agree that you will not, and will not permit any third party to:</p>
+<ul><li>Use the App to intercept, capture, or modify network traffic without proper authorization or in violation of any applicable law, regulation, or the rights of any person;</li><li>Use the App to gain unauthorized access to any system, account, or data;</li><li>Use the App for any unlawful, fraudulent, or malicious purpose, including surveillance of, or interference with, other people&#x27;s communications without their consent;</li><li>Reverse engineer, decompile, or disassemble the App except to the extent that such restriction is expressly prohibited by applicable law;</li><li>Rent, lease, lend, sell, redistribute, or sublicense the App; or</li><li>Remove, alter, or obscure any proprietary notices in the App.</li></ul>
+<p>You are solely responsible for ensuring that your use of the App complies with all applicable laws and with any agreements or policies that apply to the networks, devices, and systems you use it on.</p>
+<h3>4. HTTPS INSPECTION AND CERTIFICATES</h3>
+<p>The App can perform HTTPS inspection (&quot;man-in-the-middle&quot; decryption) using a locally generated Certificate Authority. On iOS, you must manually install and fully trust it in Settings. On macOS, you may use the App&#x27;s explicit, confirmed install-and-trust action or install and trust it manually. Installing and trusting this certificate changes how your device validates encrypted connections. You are responsible for understanding this behavior, for installing the certificate only on devices you control, and for removing the certificate and disabling capture when you no longer need it. We are not responsible for any security consequences arising from your installation or misuse of the certificate or the capture features.</p>
+<h3>5. NETWORK CAPTURE AND NETWORKEXTENSION CONFIGURATION</h3>
+<p>On iOS, the App may install and use a local VPN / Packet Tunnel configuration to route device traffic into its capture pipeline. On macOS, capture uses a NetworkExtension transparent proxy configuration. These configurations require your explicit permission. You may stop capture in the App and manage the configurations in your device settings.</p>
+<p>You may configure upstream HTTP or SOCKS5 proxies or choose a paired Mac as the Internet Exit for captured origin connections. These options send traffic through the destinations you configure; the App is not a remote VPN service operated by us.</p>
+<h3>6. YOUR DATA</h3>
+<p>Captured traffic, certificates, request collections, and related data are stored locally on your device under your control. If you enable capture sync to a paired Mac, captured traffic is also transferred to and stored on that Mac. If you enable Report Server rules, matching captured requests and responses are sent to the URL you configure. You may also export or share data through the App. Variables marked secret and supported authentication secrets are stored in the device Keychain. You are solely responsible for the security, confidentiality, and lawful handling of any data you capture, store, import, or export using the App, which may include sensitive or personal information. You are responsible for deleting such data when it is no longer needed.</p>
+<h3>7. THIRD-PARTY COMPONENTS</h3>
+<p>The App includes third-party open-source software, which is licensed under its respective terms. Such components remain subject to their own licenses, and nothing in this Agreement limits your rights under those licenses.</p>
+<h3>8. UPDATES</h3>
+<p>We may provide updates, upgrades, or modifications to the App. This Agreement governs any such updates unless they are accompanied by a separate agreement, in which case that separate agreement applies.</p>
+<h3>9. DISCLAIMER OF WARRANTY</h3>
+<p>THE APP IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;, WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, OR THAT IT WILL MEET YOUR REQUIREMENTS. YOU USE THE APP AT YOUR OWN RISK.</p>
+<h3>10. LIMITATION OF LIABILITY</h3>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE APP. OUR TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS RELATING TO THE APP WILL NOT EXCEED THE GREATER OF THE AMOUNT YOU PAID FOR THE APP OR FIVE U.S. DOLLARS (USD $5.00).</p>
+<h3>11. TERMINATION</h3>
+<p>This Agreement is effective until terminated. Your rights under this Agreement will terminate automatically if you fail to comply with any of its terms. Upon termination, you must stop using and delete all copies of the App. Sections 3 through 12 survive termination.</p>
+<h3>12. APPLE-SPECIFIC TERMS</h3>
+<p>You acknowledge that this Agreement is between you and us only, and not with Apple. Apple is not responsible for the App or its content. Apple has no obligation to furnish any maintenance or support services for the App. In the event the App fails to conform to any applicable warranty, you may notify Apple, and Apple may refund the purchase price (if any); to the maximum extent permitted by law, Apple has no other warranty obligation. Apple is not responsible for addressing any claims relating to the App, including product liability, legal or regulatory compliance, or consumer protection claims. Apple is not responsible for the investigation, defense, settlement, or discharge of any third-party claim that the App infringes intellectual property rights. You represent that you are not located in a country subject to a U.S. Government embargo or designated as a &quot;terrorist supporting&quot; country, and that you are not on any U.S. Government list of prohibited or restricted parties. Apple and its subsidiaries are third-party beneficiaries of this Agreement and may enforce it against you.</p>
+<h3>13. GOVERNING LAW</h3>
+<p>This Agreement is governed by the laws of the People&#x27;s Republic of China, without regard to its conflict-of-laws principles, except to the extent that applicable consumer protection law requires otherwise.</p>
+<h3>14. CONTACT</h3>
+<p>For questions about this Agreement, contact us at epa6643@gmail.com.</p></section></main>
+
+</body></html>

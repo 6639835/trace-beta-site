@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trace is a native network-capture and API debugging tool for iOS and macOS. Beta details, testing guidance, and license agreement.">
+<title>App review information — Trace</title>
+<link rel="stylesheet" href="assets/simple.min.css">
+<style>
+:root { --accent: #2563eb; --accent-hover: #1d4ed8; }
+body { grid-template-columns: 1fr min(100% - 2rem, 46rem) 1fr; }
+body > header { background: var(--bg); border-bottom: 1px solid var(--border); padding: 1.5rem 1rem 1rem; }
+header h1 { margin: 0 0 1rem; letter-spacing: -.04em; font-size: 2rem; }
+header p { margin: .4rem auto 1.2rem; max-width: 36rem; }
+.eyebrow, .muted { color: var(--text-light); font-size: .9rem; }
+header nav { padding-top: 1rem; }
+header nav a { border: none; padding: .25rem .5rem; font-size: .9rem; }
+section { border: none; padding: 1rem 0; margin: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
+h2 { font-size: 1.65rem; } h3 { font-size: 1.05rem; margin-top: 1.8rem; }
+section { scroll-margin-top: 1rem; } li + li { margin-top: .6rem; }
+.template-note { float: none; width: auto; margin: 1rem 0; font-size: .85rem; }
+.template-note p { margin-bottom: 0; }
+footer a + a { margin-left: 1rem; }
+@media (prefers-color-scheme: dark) { :root { --accent: #93b4ff; --accent-hover: #bdd0ff; } }
+header nav a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration: underline; }
+</style>
+</head><body>
+<header><h1>Trace</h1>
+<a class="button" href="https://testflight.apple.com/join/TRACE000" target="_blank" rel="noopener noreferrer">Join the TestFlight beta ↗</a>
+<nav aria-label="Pages"><a href="index.html">Beta overview</a><a href="review.html" aria-current="page">App review information</a><a href="testing.html">What to test</a><a href="eula.html">End user license agreement</a></nav></header>
+<main><section id="review" aria-labelledby="review-title"><h2 id="review-title">App review information</h2><h3>Overview</h3>
+<p>Trace is a developer tool for capturing and debugging network traffic that the user is authorized to inspect, with an API request workbench (Compose). Capture is explicitly enabled by the user. iOS supports Proxy and Tunnel capture; macOS uses a transparent proxy. Optional paired-Mac features can transfer captured traffic to a Mac selected by the user and route origin connections through that Mac.</p>
+<h3>No Account Required</h3>
+<p>Trace does not require an app account or demo login. Authenticated API requests require the user&#x27;s API credentials.</p>
+<h3>How To Exercise The Main Features During Review</h3>
+<p>1. Capture: On iOS, choose Settings &gt; Capture Mode &gt; Tunnel, then start capture from the Capture tab and approve the VPN configuration. On macOS, choose Start Capture and approve the NetworkExtension configuration when prompted. Browse a website or use another app to generate traffic, then inspect requests and responses.</p>
+<p>2. HTTPS: Stop capture before changing decryption settings. Open Certificate &amp; Trust. On iOS, choose Open Install Page, install the downloaded profile in Settings, then enable full trust in Settings &gt; General &gt; About &gt; Certificate Trust Settings. On macOS, choose Install Trace CA and confirm the trust operation; macOS may request authentication. Enable HTTPS decryption in capture settings, start capture, and generate HTTPS traffic.</p>
+<p>3. Compose: Open Compose, create a GET request to a public API, send it, and inspect the response, headers, timing, and tests.</p>
+<p>4. Import/Export: Import a cURL command or HAR file, or export a capture as HAR. Insomnia is supported for import; collection exports include Trace, Postman, OpenAPI, and Markdown.</p>
+<p>5. Optional paired-Mac capture: On macOS, open Settings &gt; Device Capture, enable Allow Device Capture, and choose Pair New Device. On iOS, open Settings &gt; Mac Connection &gt; Add Mac and complete pairing. Choose the Mac under Mac Display to sync captures. Internet Exit is selected separately; routing through the Mac also requires Allow Devices to Use This Mac&#x27;s Internet on the Mac. This is not required for standalone capture or Compose.</p>
+<h3>Networkextension Usage</h3>
+<ul><li>iOS Tunnel capture uses a Packet Tunnel that the user explicitly enables. macOS capture uses a transparent proxy provider that also requires user approval.</li><li>These are capture extensions, not a developer-operated remote VPN service. iOS Tunnel supports direct connections or an unauthenticated HTTP upstream proxy. Other proxy paths support HTTP/SOCKS5 upstreams. A paired Mac can also be selected as Internet Exit.</li></ul>
+<h3>Certificate / Mitm Disclosure</h3>
+<p>HTTPS inspection uses a locally generated CA. iOS installation and full trust require manual action in Settings. macOS provides an explicit, confirmed install-and-trust action. Without trust or with decryption disabled, HTTPS is forwarded encrypted. Capture and decryption remain subject to the configured routing and filtering settings.</p>
+<h3>Data Handling</h3>
+<p>Capture and Compose data are persisted locally. If Mac Display sync is enabled, captured traffic is also transferred to the selected paired Mac. Internet Exit routing is independent of display sync. Enabled Report Server rules send matching captures to a configured URL. Trace does not automatically upload captures to developer-operated servers.</p>
+<p>CA private keys, variables marked secret, and supported authentication secrets use Keychain. Compose workspace exports scrub designated secrets and authentication fields; captured traffic and HAR exports can contain sensitive URLs, headers, cookies, tokens, and bodies.</p>
+<h3>Permissions Used And Why</h3>
+<ul><li>NetworkExtension: iOS Packet Tunnel and macOS transparent capture.</li><li>Local network: discover, pair, and connect to a Mac or receive captures from paired devices. Local proxy and certificate-download endpoints are also used by the app.</li><li>Keychain: CA private keys, Compose secrets, and paired-device credentials.</li></ul>
+<h3>Contact</h3>
+<p>Contact the email on file in App Store Connect for review assistance.</p></section></main>
+
+</body></html>
