@@ -23,10 +23,13 @@ section { scroll-margin-top: 1rem; } li + li { margin-top: .6rem; }
 footer a + a { margin-left: 1rem; }
 @media (prefers-color-scheme: dark) { :root { --accent: #93b4ff; --accent-hover: #bdd0ff; } }
 header nav a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration: underline; }
+a.button.docs-button { margin-left: .5rem; background: transparent; color: var(--accent); }
+@media (max-width: 420px) { .docs-button { margin-left: 0; } header > .button { margin: .25rem; } }
 </style>
 </head><body>
 <header><h1>Trace</h1>
 <a class="button" href="https://testflight.apple.com/join/TRACE000" target="_blank" rel="noopener noreferrer">Join the TestFlight beta ↗</a>
+<a class="button docs-button" href="https://usetrace.site/">Documentation ↗</a>
 <nav aria-label="Pages"><a href="index.html">Beta overview</a><a href="review.html" aria-current="page">App review information</a><a href="testing.html">What to test</a><a href="eula.html">End user license agreement</a></nav></header>
 <main><section id="review" aria-labelledby="review-title"><h2 id="review-title">App review information</h2><h3>Overview</h3>
 <p>Trace is a developer tool for capturing and debugging network traffic that the user is authorized to inspect, with an API request workbench (Compose). Capture is explicitly enabled by the user. iOS supports Proxy and Tunnel capture; macOS uses a transparent proxy. Optional paired-Mac features can transfer captured traffic to a Mac selected by the user and route origin connections through that Mac.</p>

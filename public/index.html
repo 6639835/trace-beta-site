@@ -23,10 +23,13 @@ section { scroll-margin-top: 1rem; } li + li { margin-top: .6rem; }
 footer a + a { margin-left: 1rem; }
 @media (prefers-color-scheme: dark) { :root { --accent: #93b4ff; --accent-hover: #bdd0ff; } }
 header nav a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration: underline; }
+a.button.docs-button { margin-left: .5rem; background: transparent; color: var(--accent); }
+@media (max-width: 420px) { .docs-button { margin-left: 0; } header > .button { margin: .25rem; } }
 </style>
 </head><body>
 <header><h1>Trace</h1>
 <a class="button" href="https://testflight.apple.com/join/TRACE000" target="_blank" rel="noopener noreferrer">Join the TestFlight beta ↗</a>
+<a class="button docs-button" href="https://usetrace.site/">Documentation ↗</a>
 <nav aria-label="Pages"><a href="index.html" aria-current="page">Beta overview</a><a href="review.html">App review information</a><a href="testing.html">What to test</a><a href="eula.html">End user license agreement</a></nav></header>
 <main><section id="beta" aria-labelledby="beta-title"><h2 id="beta-title">Beta overview</h2><p>Trace is a native network-capture and API debugging tool for iOS and macOS.</p>
 <p>It captures and inspects HTTP/1.1, HTTP/2, HTTPS (MITM), WebSocket, and Server-Sent Events traffic, and includes a request workbench (Compose) for authoring, replaying, and testing API requests.</p>
